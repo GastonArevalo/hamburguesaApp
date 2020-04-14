@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="wrapper fadeInDown">
+    <div id="formContent" style="padding: 2%;">
+                        
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="../../../assets/archivos/cheese-burger.svg"  id="icon" alt="User Icon" />
+            <br>
+            <h3 for="">Seguimiento de Pedidos</h3>
+        </div>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Id pedido</th>
+                <th scope="col">Cantidad de Hamburguesas</th>
+                <th scope="col">Total</th>
+                <th scope="col">Hora del pedido</th>
+                <th scope="col">Estado del Pedido</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pedido of pedidos;">
+                <th scope="row">{{ pedido.id }}</th>
+                <td>{{ pedido.burgers_count }}</td>
+                <td>${{ pedido.total }}</td>
+                <td>{{ pedido.time | date:" HH:mm dd/MM/yyyy" }}</td>
+                <td *ngIf="pedido.estado == 0">Pendiente</td>
+                <td *ngIf="pedido.estado == 1">Confirmado</td>
+                <td *ngIf="pedido.estado == 2">Enviado</td>
+                <td *ngIf="pedido.estado == 3">Entregado</td>
+              </tr>
+              
+              
+            </tbody>
+          </table>
+    </div>
+  </div>

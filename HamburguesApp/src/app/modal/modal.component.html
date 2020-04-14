@@ -1,0 +1,12 @@
+
+  <h3  class="text-center modal-title modal-header">Hola {{username}}</h3>
+<div  class="modal-body text-center">
+  <h5>Desea Confirmar Su Pedido?</h5>
+  
+</div>
+<div mat-dialog-actions class="modal-footer text-center">
+  <button mat-button (click)="toSend()" class="btn btn-success" cdkFocusInitial>Confirmar</button>
+  <button mat-button (click)="onNoClick()" class="btn btn-danger">Cancelar</button>
+
+</div>
+

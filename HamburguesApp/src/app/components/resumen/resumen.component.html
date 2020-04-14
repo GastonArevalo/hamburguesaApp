@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+<div class="resumen">
+<div class="back">
+
+    <div class="container" style="margin-bottom: 150px;">
+        <div class="row">
+
+                <div class="col-md-12 text-center" >
+                    <div class="text-center bg-danger " style="margin-top: 10px;width: 50%;margin-left: 25%;">
+                    <h1><strong>Resumen de Pedido</strong></h1>
+                </div>
+                <div class="bg-light hamburguesa text-center" *ngFor="let hamburguesa of hamburguesas; let i = index" >
+                    <img src="../../../assets/archivos/cheese-burger.svg" class="img1" alt="">
+                    <br >
+                    <div class="col-md-12" >
+                    <h2>Hamburguesa Numero <br>{{i + 1}}</h2>
+                    
+                    <h2>TAMAÑO {{pedidos[i].size}}</h2>
+                    <h4>Los Toppings de la hamburguesa son:</h4>
+                    <br>
+                    <div class="text-center top row" >
+                        <div *ngIf="pedidos[i].bacon" class="col"> <img src="../../../assets/archivos/001-bacon.svg" alt="bacon">Bacon</div>
+                        <div *ngIf="pedidos[i].lechuga" class="col"> <img src="../../../assets/archivos/004-lettuce.svg" alt="lechuga">Lechuga</div>
+                        <div *ngIf="pedidos[i].tomate" class="col"> <img src="../../../assets/archivos/002-tomato.svg" alt="tomate">Tomate</div>
+                        <div *ngIf="pedidos[i].caramelizada" class="col"> <img src="../../../assets/archivos/005-onion.svg" alt="caramelizada">Caramelizada</div>
+                        <div *ngIf="pedidos[i].morada" class="col"> <img src="../../../assets/archivos/006-onion-1.svg" alt="morada">Morada</div>
+                        <div *ngIf="pedidos[i].chile" class="col"> <img src="../../../assets/archivos/007-chilli.svg" alt="chile">Chile</div>
+                        <div *ngIf="pedidos[i].champ" class="col"> <img src="../../../assets/archivos/008-mushroom.svg" alt="champ">Champiñones</div>
+                        <div *ngIf="pedidos[i].salsa" class="col"> <img src="../../../assets/archivos/009-mayonnaise.svg" alt="salsa">Salsa</div>
+                        <div *ngIf="pedidos[i].pan" class="col"> <img src="../../../assets/archivos/003-bun.svg" alt="pan">Pan esp.</div>
+                    </div>
+                    
+                    </div>
+                </div>
+
+
+                <div class="container hamburguesa" >
+                <div class="col-md-4 row bg-light " style="margin: auto;border: solid 2px #dc3545;">
+                    <h4>TOTAL: ${{precio}}</h4>
+                </div>
+                </div>
+
+
+                <button class="btn btn-danger" style="margin: 5px;" (click)="openDialog()" >Aceptar</button>
+                <button class="btn btn-danger" style="margin: 5px;" routerLink="/realizar-pedido" >Realizar otro pedido</button>
+                
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="empty"></div>
+</div>

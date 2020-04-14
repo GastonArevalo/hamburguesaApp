@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+    <div class="todo" style="margin-bottom: 150px; padding: 5%;">
+        <div class="container">
+            <div class="row" style="margin-left: 0; margin-right: 0;">
+                <div class="wrapper fadeInDown container" id="modal">
+                     <div id="formContent" style="padding: 2%;">
+                        
+                    <!-- Icon -->
+                    <div class="fadeIn first">
+                        <img src="../../../assets/archivos/cheese-burger.svg"  id="icon" alt="User Icon" />
+                        <br>
+                        <h3 for="">Historial de Pedidos</h3>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id pedido</th>
+                            <th scope="col">Cantidad de Hamburguesas</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Hora del pedido</th>
+                            <th scope="col">Estado del Pedido</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let pedidos of cantidad_pedidos;">
+                            <th scope="row">{{id_pedido[pedidos]}}</th>
+                            <td>{{burgers_pedido[pedidos]}}</td>
+                            <td>${{total_pedido[pedidos]}}</td>
+                            <td>{{hora_pedido[pedidos]}}</td>
+                            <td>{{estado_pedido[pedidos]}}</td>
+                          </tr>
+                          
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+img{
+    height: 35px;
+    width: 35px;
+}
+.numero-hamburguesa{
+    margin-top: 15px;
+}
+
+.size{
+    margin: auto;
+}
+.enviar{
+    margin-top: 20px;
+    width: 200px;
+    height: 75px;
+    font-size: 40px;
+}
+input{
+    height: 50px;
+    width: 30px;
+}
+.empty{
+    width: 100%;
+    height: 150px;
+}

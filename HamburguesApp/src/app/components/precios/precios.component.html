@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../../../assets/archivos/cheese-burger.svg"  id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form (submit)="actualizar()">
+      <input type="text" id="" class="fadeIn second" [(ngModel)]="S" pattern="[0-9]+" name="S" placeholder="Precio S">
+      <input type="text" id="" class="fadeIn second" [(ngModel)]="M" pattern="[0-9]+" name="M" placeholder="Precio M">
+      <input type="text" id="" class="fadeIn second" [(ngModel)]="L" pattern="[0-9]+" name="L" placeholder="Precio L">
+      <input type="text" id="" class="fadeIn second" [(ngModel)]="XL" pattern="[0-9]+" name="XL" placeholder="Precio XL">
+      
+  
+      <input type="submit"  class="fadeIn fourth bg-danger" value="actualizar">
+    </form>
+
+    
+    
+  </div>
+</div>

@@ -1,0 +1,82 @@
+.back{
+    background-image: url('../../../assets/archivos/banner2.png');
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: saturate(0.5);
+    position: relative;
+    }
+    .todo{
+        background-color: #370d11;
+    }
+    .logo{
+        position: relative;
+        color:white;
+        text-align: center;
+        top: 10%;
+    }
+    .logo img{
+        width: 400px;
+        filter: invert(1);
+    }
+    
+    .name{
+        padding: 5px;
+        color: white;
+        margin: 5px;
+    }
+    .image{
+        background-color: #dee2e6;
+    }
+    .image img{
+        width: 100px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        
+    }
+    .name-size{
+        color: white;
+        padding: 5px;
+        margin: 5px;
+    }
+    .nuestras{
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: white;
+    }
+    .opciones{
+        border: 5px solid #b32936;
+        padding: 1px;
+    }
+    .price{
+        border: 7px solid #e4e4e4;
+        padding: 5px;
+    }
+    
+    
+    .bacon div img{
+        height: 100px;
+        margin-bottom: 40px;
+        margin-top: 5px;
+    }
+    .nuestros-top{
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: white;
+    }
+    .pedido-personalizado{
+    background: #dc3545;
+    font-size: 30px;
+    padding: 17px 80px;
+    color: white;
+    border-radius: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 0px;
+    box-shadow: 1px 1px 7px 1px #00000069;
+    outline: none;
+    }

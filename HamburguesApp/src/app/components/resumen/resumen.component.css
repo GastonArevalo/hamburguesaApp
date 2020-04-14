@@ -1,0 +1,44 @@
+
+.back{
+    background-color:#370d11;
+    height: 100vh;
+    width: 100%;
+}
+h1{
+    color:white;
+    
+}
+.hamburguesa{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.img1{
+    height: 75px;
+    width: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+p{
+    color: white;
+    font-size: 100px;
+    background-color: black;
+    height: 200px;
+    width: 200px;
+}
+img{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px;
+}
+.empty{
+    width: 100%;
+    height: 150px;
+}
+.resumen{
+    width: 100%;
+    height: 100%;
+    background-color: #370d11;
+    margin-bottom: 150px;
+}

@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../../../assets/archivos/cheese-burger.svg"  id="icon" alt="User Icon" />
+    </div>
+    <h2 class="text-center">INICIAR SESION</h2>
+
+    <!-- Login Form -->
+    <form (submit)="ingresar()">
+      <input type="text" id="login" class="fadeIn second" [(ngModel)]="usuario" name="login" placeholder="Usuario">
+      <input type="password" id="password" class="fadeIn third" name="login" [(ngModel)]="pass" placeholder="Contraseña">
+      <div *ngIf="error">
+        Usuario o Contraseña incorrectos
+      </div>
+  
+      <input type="submit"  class="fadeIn fourth bg-danger" value="Ingresar">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" (click)="noYet()" >Olvide mi contraseña</a>
+      <br>
+      <a class="underlineHover" (click)="register()"><strong>Crear Nuevo Usuario</strong></a>
+    </div>
+    
+  </div>
+</div>

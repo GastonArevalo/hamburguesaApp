@@ -1,0 +1,110 @@
+
+<div class="container">
+    
+    
+    <div *ngFor="let hamburguesa of hamburguesas; let i as index;">
+        <!-- (change)="enviarHamburguesas()" -->
+     <form >  
+
+    <div class="row bg-light" style="border: 4px solid darkred;">
+
+        
+            
+        <div class="numero-hamburguesa text-center">
+            <img src="../../../assets/archivos/cheese-burger.svg" alt="" >
+            <br>
+            <strong><p>Hamburguesa <br>Numero <br> {{i+1}}</p></strong>
+        </div>
+        
+        <div class="col size form-control form-control-lg text-center">
+            
+            <select name="size" id="size{{i}}" required (change)="setSize($event.target.value, i)" >
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="S" selected disabled>TAMAÑO</option>
+            </select>
+            <br>
+            <div class="btn-danger" style="margin-top: 10px;">
+                <span *ngIf="size[i] == 'S'">${{status.S.price}}</span>
+                <span *ngIf="size[i] == 'M'">${{status.M.price}}</span>               
+                <span *ngIf="size[i] == 'L'">${{status.L.price}}</span>              
+                <span *ngIf="size[i] == 'XL'">${{status.XL.price}}</span>              
+            </div>
+        </div>
+
+        <div class="col bacon text-center" >
+            <p>Bacon</p>
+            <img src="../../../assets/archivos/001-bacon.svg" alt="" >
+            <br>
+            <input type="checkbox"  id="bacon{{i}}"   name="bacon{{i}}" (change)="setBacon($event.target.checked, i)">
+        </div>
+
+        <div class="col tomate text-center">
+            <p>Tomate</p>
+            <img src="../../../assets/archivos/002-tomato.svg" alt="" >
+            <br>
+            <input type="checkbox" name="" id="tomate{{i}}" (change)="setTomate($event.target.checked, i)">
+        </div>
+
+        <div class="col lechuga text-center">
+            <p>Lechuga</p>
+            <img src="../../../assets/archivos/004-lettuce.svg" alt="" >
+            <br>
+            <input type="checkbox" id="lechuga{{i}}" (change)="setLechuga($event.target.checked, i)">
+        </div>
+
+
+        <div class="col text-center">
+            <p>Morada</p>
+            <img src="../../../assets/archivos/006-onion-1.svg" alt="" >
+            <br>
+            <input type="checkbox" id="morada{{i}}" (change)="setMorada($event.target.checked, i)">
+        </div>
+        <div class="col text-center">
+            <p>Caramelizada</p>
+            <img src="../../../assets/archivos/005-onion.svg" alt="" >
+            <br>
+            <input type="checkbox" id="caramelizada{{i}}" (change)="setCaramelizada($event.target.checked, i)">
+        </div>
+        <div class="col text-center">
+            <p>Chile</p>
+            <img src="../../../assets/archivos/007-chilli.svg" alt="" >
+            <br>
+            <input type="checkbox" id="chile{{i}}" (change)="setChile($event.target.checked, i)">
+        </div>
+
+
+        <div class="col text-center">
+            <p>Champiñones</p>
+            <img src="../../../assets/archivos/008-mushroom.svg" alt="" >
+            <br>
+            <input type="checkbox" id="champ{{i}}" (change)="setChamp($event.target.checked, i)">
+        </div>
+        <div class="col text-center">
+            <p>Salsa</p>
+            <img src="../../../assets/archivos/009-mayonnaise.svg" alt="" >
+            <br>
+            <input type="checkbox" id="salsa{{i}}" (change)="setSalsa($event.target.checked, i)">
+        </div>
+        <div class="col text-center">
+            <p>Pan Q</p>
+            <img src="../../../assets/archivos/003-bun.svg" alt="" >
+            <br>
+            <input type="checkbox" id="pan{{i}}" (change)="setPan($event.target.checked, i)">
+        </div>
+
+          
+    </div>
+</form>
+</div>
+<div class="text-center">
+    
+    <input type="submit" class="btn btn-danger enviar" value="Enviar" (click)="enviarHamburguesas()" routerLink="/resumen">
+</div>
+</div>
+    <div class="empty">
+
+    </div>
+

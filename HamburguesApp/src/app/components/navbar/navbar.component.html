@@ -1,0 +1,48 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <div class="container">
+<nav class="navbar navbar-light bg-danger">
+  
+  <a class="navbar-brand" href="">
+    <img src="../../../assets/archivos/burger.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    HamburguesApp
+  </a>
+</nav>
+  
+    <div  class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item" *ngIf="username == 'admin'" >
+          <a class="nav-link"  (click)="panelAdmin()" style="cursor:pointer;">Panel Pedidos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="username != 'admin' && username != ''" style="cursor:pointer;" (click)="realizarPedido()" >Realizar Pedido</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sobre-nosotros">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span *ngIf="true">{{username == "" ? "Iniciar Sesion":username}}</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" style="cursor:pointer;" *ngIf="username == ''" routerLink="/login">Iniciar Sesion</a>
+            <a class="dropdown-item" style="cursor:pointer;" *ngIf="username != 'admin' && username != ''" (click)="seguimientoPedidos()">Seguimiento Pedidos</a>
+            <a class="dropdown-item" style="cursor:pointer;" *ngIf="username != 'admin' && username != ''" (click)="historialPedidos()">Historial de Pedidos</a>
+            <a class="dropdown-item" style="cursor:pointer;" *ngIf="username == 'admin'" (click)="panelAdmin()">Panel Administrador</a>
+            <a class="dropdown-item" style="cursor:pointer;" *ngIf="username == 'admin'" (click)="configuracion()">Actualizar Precios</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" *ngIf="username != ''" (click)="cerrarSesion()" >Cerrar Sesion</a>
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  </nav>
